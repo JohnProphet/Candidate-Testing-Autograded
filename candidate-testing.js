@@ -18,7 +18,7 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-let name = prompt("What is your name?");}
+let candidateName = prompt("What is your name?");}
   
 
 function askQuestion() {
@@ -31,7 +31,7 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-if (candidateAnswer.trim() === correctAnswer.trim())
+if (candidateAnswer === correctAnswer)
 {    console.log("Great Job!");
 }    else {
       console.log("Sorry, that is incorrect");}
@@ -46,7 +46,7 @@ if (candidateAnswer.trim() === correctAnswer.trim())
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hi ${name}! nice to meet you!");
+   console.log("Hi ${candidateName}! Nice to meet you!");
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
