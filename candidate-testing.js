@@ -18,13 +18,13 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-let candidateName = prompt("What is your name?");}
+candidateName = input.question("What is your name?");}
   
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-let candidateAnswer = prompt(question);
+candidateAnswer = input.question(question);
 }
 
 function gradeQuiz(candidateAnswers) {
@@ -46,7 +46,7 @@ if (candidateAnswer === correctAnswer)
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hi ${candidateName}! Nice to meet you!");
+   console.log(`Hi ${candidateName}! Nice to meet you!`);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
