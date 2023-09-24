@@ -19,7 +19,9 @@ let correctAnswers = ["Sally Ride" , "true", "40" , "Trajectory" , "3"];
 let candidateAnswers = [];
 
 function askForName() {
+
   // TODO 1.1b: Ask for candidate's name //
+
   candidateName = input.question("What is your name? ");
 }
 
@@ -38,8 +40,9 @@ function askQuestion() {
 } 
 
 function gradeQuiz(candidateAnswers) {
+
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  //console.log(candidateAnswers);
+
   let finalGrade = 0;
 for (let i = 0; i < correctAnswers.length; i++) {
   if (candidateAnswers[i].toString().toLowerCase() === correctAnswers[i].toLowerCase()) { 
@@ -60,13 +63,17 @@ for (let i = 0; i < correctAnswers.length; i++) {
 
 function runProgram() {
   askForName();
+
   // TODO 1.1c: Greet candidate using their name //
-   console.log(`Hi ${candidateName}! Nice to meet you!`);
+
+  console.log(`Hi ${candidateName}! Nice to meet you!`);
   let questionsAnswered = askQuestion();
   gradeQuiz(questionsAnswered);
 }
 runProgram();
+
 // ----------- Don't write any code or change any code below this line ---------- //
+
 module.exports = {
   candidateName: candidateName,
   question: question,
