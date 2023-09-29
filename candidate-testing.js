@@ -24,59 +24,45 @@ function askForName() {
 
   candidateName = input.question("What is your name? ");
 }
-
-  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
-  
+  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer // 
 function askQuestion() {
-  // let answers = [];
 
   for (let i = 0; i < questions.length; i++) {
    let answer = input.question(`${i+1}) ${questions[i]}`);
     candidateAnswers.push(answer);
  }
- // return answers;
-
 } 
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
   let finalGrade = 0;
 for (let i = 0; i < questions.length; i++) {
   if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) { 
     finalGrade++;
   }
     console.log(`That's right ${candidateName}! The answer is: ${correctAnswers[i]}`);
-// } else {
     console.log(`Sorry ${candidateName}, but the correct answer is: ${correctAnswers[i]}`);  
 }
 
-
 //TODO 3.2 use this variable to calculate the candidates score.
  
-  let grade = (finalGrade / questions.length) * 100;
-  
+  let grade = (finalGrade / questions.length) * 100; 
   if (grade <= 80) {
     console.log(`Your Overall Score is: ${grade}% (${finalGrade} out of 5.)\nStatus: Failed`);
   } else { console.log(`Your Overall Score is: ${grade}% (${finalGrade} out of 5.)\nStatus: Passed`);}
 
   return grade;
 }
-
 function runProgram() {
   askForName();
 
   // TODO 1.1c: Greet candidate using their name //
 
   console.log(`Hi ${candidateName}! Nice to meet you!`);
-  // let questionsAnswered = askQuestion();
-  askQuestion();
-//  gradeQuiz(questionsAnswered);
+askQuestion();
 gradeQuiz(this.candidateAnswers);
 }
-// runProgram();
 
 // ----------- Don't write any code or change any code below this line ---------- //
 
