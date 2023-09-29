@@ -40,11 +40,11 @@ function gradeQuiz(candidateAnswers) {
 for (let i = 0; i < questions.length; i++) {
   if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) { 
     finalGrade++;
-  
+  }
     console.log(`That's right ${candidateName}! The answer is: ${correctAnswers[i]}`);
-  } else {  console.log(`Sorry ${candidateName}, but the correct answer is: ${correctAnswers[i]}`);  
+    console.log(`Sorry ${candidateName}, but the correct answer is: ${correctAnswers[i]}`);  
 }
-}
+
 //TODO 3.2 use this variable to calculate the candidates score.
  
   let grade = (finalGrade / questions.length) * 100; 
